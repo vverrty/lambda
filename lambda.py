@@ -19,7 +19,7 @@ def update():
         ExpressionAttributeNames = { "#ct": "counter" },
         ReturnValues = "UPDATED_NEW",
     )
-    #hello world asdasd
+    #hello world asdasdadsads
 def put13():
     table.put_item(
        Item={
