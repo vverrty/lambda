@@ -20,7 +20,7 @@ def update():
         ReturnValues = "UPDATED_NEW",
     )
     
-def put5():
+def put6():
     table.put_item(
        Item={
         'views': 'views',
