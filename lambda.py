@@ -2,7 +2,7 @@ import json
 import boto3
 import unittest
 
-#test6
+#test7
 dynamodb = boto3.resource('dynamodb')
 table = dynamodb.Table('dynamo_terraform')
 
