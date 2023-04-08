@@ -19,9 +19,6 @@ def update():
         ExpressionAttributeNames = { "#ct": "counter" },
         ReturnValues = "UPDATED_NEW",
     )
-    #heasd ad asd
-    #Iwant to add another ocmment asd  test 1
-    #asd test 3
 def put14():
     table.put_item(
        Item={
