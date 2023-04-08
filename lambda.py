@@ -2,7 +2,6 @@ import json
 import boto3
 import unittest
 
-#test12
 dynamodb = boto3.resource('dynamodb')
 table = dynamodb.Table('dynamo_terraform')
 
@@ -21,6 +20,8 @@ def update():
         ReturnValues = "UPDATED_NEW",
     )
     #heasd
+    #Iwant to add another ocmment asd  test 1
+    #asd test 3
 def put14():
     table.put_item(
        Item={
