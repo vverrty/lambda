@@ -1,16 +1,16 @@
 import json
 import boto3
-import unittest
 
 dynamodb = boto3.resource('dynamodb')
 table = dynamodb.Table('dynamo_terraform')
 
+#Get counter
 def getCtr():
     ctr = int(table.get_item(
         Key = { 'views': 'views' }
     )['Item']['counter'])
     return ctr
-
+#update the counter value +1
 def update():
     table.update_item(
         Key = { 'views': 'views' },
@@ -19,14 +19,8 @@ def update():
         ExpressionAttributeNames = { "#ct": "counter" },
         ReturnValues = "UPDATED_NEW",
     )
-def put14():
-    table.put_item(
-       Item={
-        'views': 'views',
-        'counter': 1
-       } 
-    )
-    
+
+#initillay I used the unittest library to test whether DynamoDB would actually make changes
 futureCounter = getCtr() + 1
 
 def lambda_handler(event, context):
